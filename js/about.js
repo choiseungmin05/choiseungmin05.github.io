@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const jobSelection = document.getElementById('job-selection');
     const webDeveloperInfo = document.getElementById('web-developer-info');
     const softwareDeveloperInfo = document.getElementById('software-developer-info');
+    const scrollInstruction = document.getElementById('scroll-instruction');
 
     jobSelection.addEventListener('change', () => {
         if (document.querySelector('input[name="job"]:checked').value === 'web-developer') {
@@ -76,6 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
             webDeveloperInfo.style.display = 'none';
             softwareDeveloperInfo.style.display = 'block';
         }
+
+        
+        scrollInstruction.style.display = 'none';
     });
 });
 
