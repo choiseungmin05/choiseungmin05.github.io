@@ -217,13 +217,17 @@ nav ul li a:hover, nav ul li button:hover {
 }
 
 /* 기존 CSS에서 수정된 부분만 표시 */
-.experience-item {
-  display: flex;
-  align-items: center;
-  margin: 1em 0;
+.experience-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
   transition: transform 0.5s;
-  cursor: pointer;
 }
+
+.rotate-left {
+  transform: rotateY(180deg); /* 이미지를 왼쪽으로 회전 */
+}
+
 
 .experience-item img {
   width: 50px;

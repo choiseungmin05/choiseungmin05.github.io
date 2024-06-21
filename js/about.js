@@ -78,3 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const experienceItems = document.querySelectorAll('.experience-item');
+
+    experienceItems.forEach(item => {
+        const image = item.querySelector('img');
+
+        item.addEventListener('click', () => {
+            image.classList.toggle('rotate-left');
+        });
+    });
+});
