@@ -1,0 +1,242 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(115deg, #e0f7fa, #ffffff);
+  color: #333;
+  transition: background 0.5s, color 0.5s;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+  text-align: center;
+  border-bottom: 2px solid #b2ebf2;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a, nav ul li button {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li button:hover {
+  color: #004d40;
+}
+
+
+nav ul li a:hover {
+  color: #1abc9c; 
+}
+
+nav ul li button:hover {
+  color: #333;
+}
+
+section {
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 2em auto;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.5s;
+}
+
+#home {
+  text-align: center;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  color: white;
+  background: #5ba8c0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #3299da;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.8);
+  color: #00796b;
+  text-align: center;
+  padding: 1em;
+  border-top: 2px solid #b2ebf2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.dark-theme {
+  background: linear-gradient(115deg, #1d1e26, #23262e);
+  color: #f5f5f5;
+}
+
+.dark-theme header,
+.dark-theme section,
+.dark-theme footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #f5f5f5;
+  border-color: #3a3b46;
+}
+
+.dark-theme nav ul li a,
+.dark-theme nav ul li button {
+  color: #f5f5f5;
+}
+
+.dark-theme nav ul li a:hover {
+  color: #1abc9c; /* 다크 테마에서의 호버 색상 변경 */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 햄버거 메뉴 스타일 */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+nav ul {
+  display: none; 
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul.show {
+  display: flex;
+}
+
+nav ul li {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+nav ul li a,
+nav ul li button {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007BFF; /* 모바일에서의 호버 색상 변경 */
+}
+
+/* 모바일 뷰 */
+@media (min-width: 769px) {
+  nav ul {
+    display: none; /* 모든 화면 크기에서 기본적으로 숨김 */
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  nav ul.show {
+    display: flex; /* 햄버거 메뉴 클릭 시 보여줌 */
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    padding: 0;
+  }
+
+  nav ul li a,
+  nav ul li button {
+    padding: 10px;
+  }
+}
